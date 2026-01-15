@@ -8,8 +8,8 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Centering after scrolling up or down
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz")
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Indenting in visual mode
 vim.keymap.set("v", "<", "<gv")

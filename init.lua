@@ -14,6 +14,7 @@ vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/nvim-mini/mini.pick" },
     { src = "https://github.com/stevearc/oil.nvim" },
+    { src = "https://github.com/karb94/neoscroll.nvim" },
     { src = "https://github.com/lervag/vimtex" },
     { src = "https://github.com/Julian/lean.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
@@ -56,6 +57,7 @@ require("mini.pick").setup({
     }
 })
 require("mini.pairs").setup()
+require("neoscroll").setup()
 require("oil").setup({
     keymaps = {
         ["<C-h>"] = false,
