@@ -6,12 +6,11 @@ local state = {
 
 local function create_floating_window(opts)
   opts = opts or {}
-  local width = opts.width or math.floor(vim.o.columns * 0.4)
-  local height = opts.height or math.floor(vim.o.lines * 0.9)
+  local width = opts.width or math.floor(vim.o.columns * 0.9)
+  local height = opts.height or math.floor(vim.o.lines * 0.4)
 
-  -- Calculate position (Right Side)
-  local col = vim.o.columns - width
-  local row = math.floor((vim.o.lines - height) / 2)
+  local col = math.floor((vim.o.columns - width) / 2)
+  local row = math.floor(vim.o.lines / 2)
 
   local win_config = {
     relative = "editor",
@@ -46,4 +45,4 @@ local function toggle_terminal()
   vim.cmd("startinsert")
 end
 
-vim.keymap.set("n", "<leader>tt", toggle_terminal, { desc = "Toggle Floating Terminal" })
+vim.keymap.set({"n", "t", "v"}, "<C-\\>", toggle_terminal, { desc = "Toggle Floating Terminal" })
