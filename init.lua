@@ -64,7 +64,7 @@ require("oil").setup({
     }
 })
 
-require("lean").setup({ mappings = true })
+vim.g.lean_config = { mappings = true }
 require("mason").setup()
 require("lualine").setup({ options = { theme = "auto" } })
 require("nvim-surround").setup()
